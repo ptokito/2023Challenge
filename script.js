@@ -1,4 +1,3 @@
-// Experience section logic
 document.addEventListener("DOMContentLoaded", function() {
     const experienceSection = document.getElementById("experience");
 
@@ -26,10 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
         experienceSection.appendChild(expDiv);
     });
-});
 
-// Visitor counter logic
-document.addEventListener("DOMContentLoaded", function() {
+    // Visitor counter logic
     const visitorCountElement = document.getElementById("visitorCount");
     let visitorCount = localStorage.getItem("visitorCount") || 0;
 
