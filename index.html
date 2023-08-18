@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#books">Books</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>John Doe</h1>
         <p>Web Developer</p>
@@ -26,10 +35,19 @@
             <h2>Experience</h2>
             <!-- JavaScript will populate this section -->
         </section>
+        <section id="books">
+            <h2>Books I Love</h2>
+            <ul>
+                <li>"Clean Code" by Robert C. Martin</li>
+                <li>"The Pragmatic Programmer" by Andrew Hunt and David Thomas</li>
+                <li>"You Don't Know JS" by Kyle Simpson</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>Visitor Count: <span id="visitorCount">0</span></p>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
