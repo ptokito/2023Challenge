@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2 # This is the latest version as of my last training data.
+      uses: actions/checkout@v3 # Updated to the latest version (assuming v3 is the latest).
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1 # This is the latest version as of my last training data.
+      uses: aws-actions/configure-aws-credentials@v2 # Updated to the latest version (assuming v2 is the latest).
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -26,5 +26,4 @@ jobs:
 
     - name: Invalidate CloudFront distribution
       run: |
-        aws cloudfront create-invalidation --distribution-id kongos3bucket.s3-website-us-east-1.amazonaws.com --paths "/*"
-
+        aws cloudfront create-invalidation --distribution-id 	kongos3bucket.s3-website-us-east-1.amazonaws.com --paths "/*"
