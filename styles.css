@@ -1,29 +1,37 @@
 /* ... [previous styles] ... */
 
-/* New styles for the sections */
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #34495e; /* Darker background for sections */
-    border-radius: 5px; /* Rounded corners */
-}
-
-section h2 {
-    color: #e74c3c; /* Red color for section headings */
-    text-align: center; /* Center the text of the heading */
-}
-
-section p, section .tool-icons i {
-    color: #ecf0f1; /* Light text color for content */
-    text-align: center; /* Center the text of the content */
-}
-
 .tool-icons {
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: space-around; /* Space out the icons */
     flex-wrap: wrap; /* Allow icons to wrap to next line if needed */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.tool-icons i {
+    margin: 10px 20px; /* Increase horizontal margin for more spacing */
+    font-size: 24px;
+    color: #16a085;
+    transition: color 0.3s;
+}
+
+.tool-icons i:hover {
+    color: #f39c12;
+}
+
+footer {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0; /* Increased padding for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-media {
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+footer .social-media a {
+    margin: 0 15px; /* Increase spacing between icons */
 }
