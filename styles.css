@@ -1,53 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #00ff00;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    background-color: #000;
-    padding: 0;
-}
-
-nav li {
-    margin: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #00ff00;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #fff;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #000;
-    color: #00ff00;
+    background-color: #2C3E50;
+    color: #ecf0f1;
     text-align: center;
     padding: 1em 0;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 5px solid #3498db;
 }
 
 main {
     max-width: 800px;
     margin: 2em auto;
     padding: 1em;
-    background-color: #000;
-    box-shadow: 0 0 10px #00ff00;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid #3498db;
     padding-bottom: 0.5em;
 }
 
@@ -57,32 +33,37 @@ h2 {
 
 .social-media a {
     margin: 0 10px;
-    color: #00ff00;
+    color: #ecf0f1;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-media a:hover {
-    color: #fff;
+    color: #ddd;
 }
 
 footer {
     max-width: 800px;
     margin: 1em auto;
     padding: 1em;
-    background-color: #000;
-    box-shadow: 0 0 10px #00ff00;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-#books ul {
-    list-style-type: none;
-    padding: 0;
+.tool-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
 }
 
-#books li {
-    margin: 10px 0;
-    padding-left: 10px;
-    border-left: 2px solid #00ff00;
+.tool-icons i {
+    font-size: 2em;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.tool-icons i:hover {
+    color: #2980b9;
 }
