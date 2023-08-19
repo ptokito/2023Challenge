@@ -7,11 +7,10 @@ body {
 }
 
 header {
-    background-color: #34495e; /* Slightly lighter blue for header */
+    background: linear-gradient(to right, #e74c3c, #9b59b6); /* Gradient from red to purple */
     color: #ecf0f1;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #e74c3c; /* Red accent border */
 }
 
 main {
@@ -22,30 +21,40 @@ main {
 }
 
 footer {
-    background-color: #34495e;
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
     color: #ecf0f1;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
-    border-top: 3px solid #e74c3c; /* Red accent border */
 }
 
 .tool-icons i {
     margin: 10px;
     font-size: 24px;
     color: #16a085; /* Greenish color for icons */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.tool-icons i:hover {
+    color: #f39c12; /* Orange color on hover */
 }
 
 .social-media a {
     margin: 0 10px;
-    color: #e74c3c; /* Red color for social media icons */
+    color: #f1c40f; /* Yellow color for social media icons */
     text-decoration: none;
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.social-media a:hover {
+    color: #2ecc71; /* Green color on hover */
 }
 
 h2 {
     border-bottom: 2px solid #16a085; /* Greenish border for headings */
     display: inline-block;
     padding-bottom: 5px;
+    margin-top: 20px;
 }
