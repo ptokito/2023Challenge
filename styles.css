@@ -58,3 +58,19 @@ h2 {
     padding-bottom: 5px;
     margin-top: 20px;
 }
+
+/* New styles for the sections */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #34495e; /* Darker background for sections */
+    border-radius: 5px; /* Rounded corners */
+}
+
+section h2 {
+    color: #e74c3c; /* Red color for section headings */
+}
+
+section p, section .tool-icons i {
+    color: #ecf0f1; /* Light text color for content */
+}
