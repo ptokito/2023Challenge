@@ -1,4 +1,4 @@
-name: Deploy to S3
+name: Deploy to S3 and Invalidate CloudFront
 
 on:
   push:
@@ -20,13 +20,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Deploy to S3
+    - name: Sync to S3
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
-        args: --follow-symlinks --delete --exclude '.git/*'
-      env:
-        AWS_S3_BUCKET: kongos3bucket
-        AWS_DEFAULT_REGION: us-east-1
-        AWS_REGION: us-east-1
+        args: --acl public-read --follow-symlinks --delete
+        AWS_S3_BUCKET: 'kongos3bucket'
+        AWS_DEFAULT_REGION: 'us-east-1'
+        AWS_REGION: 'us-east-1'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    # Assuming you've created a CloudFront distribution and have the distribution ID
+    - name: Invalidate CloudFront distribution
+      run: |
+        aws cloudfront create-invalidation --distribution-id YOUR_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
