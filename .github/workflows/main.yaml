@@ -28,4 +28,4 @@ jobs:
     # Assuming you've created a CloudFront distribution and have the distribution ID
     - name: Invalidate CloudFront distribution
       run: |
-        aws cloudfront create-invalidation --distribution-id YOUR_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+        aws cloudfront create-invalidation --distribution-id kongos3bucket.s3-website-us-east-1.amazonaws.com --paths "/*"
