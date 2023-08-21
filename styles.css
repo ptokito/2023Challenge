@@ -1,42 +1,63 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: #2c3e50; /* Dark blue background */
+    color: #ecf0f1; /* Light text color */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(to right, #e74c3c, #9b59b6);
+    background: linear-gradient(to right, #e74c3c, #9b59b6); /* Gradient from red to purple */
     color: #ecf0f1;
     padding: 20px 0;
     text-align: center;
 }
 
 main {
+    background-color: #f4f4f4; /* Light gray background */
     padding: 20px;
     margin: 20px;
-    background-color: #34495e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
-    background: linear-gradient(to right, #3498db, #2ecc71);
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
     color: #ecf0f1;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.social-media a {
-    margin: 0 15px;
-    transition: transform 0.3s ease;
+.tool-icons {
+    display: flex;
+    justify-content: space-around; /* Space out the icons */
+    flex-wrap: wrap; /* Allow icons to wrap to next line if needed */
+    padding: 20px 0; /* Add some vertical padding */
 }
 
-.social-media a:hover {
-    transform: scale(1.1);
+.tool-icons i {
+    margin: 10px 20px; /* Increase horizontal margin for more spacing */
+    font-size: 24px;
+    color: #16a085;
+    transition: color 0.3s;
+}
+
+.tool-icons i:hover {
+    color: #f39c12;
+}
+
+footer .social-media {
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+footer .social-media a {
+    margin: 0 15px; /* Increase spacing between icons */
 }
 
 h2 {
-    border-bottom: 2px solid #16a085;
+    border-bottom: 2px solid #16a085; /* Greenish border for headings */
     display: inline-block;
     padding-bottom: 5px;
     margin-top: 20px;
@@ -45,65 +66,28 @@ h2 {
 section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     padding: 20px;
     margin: 20px 0;
-    background-color: #34495e;
-    border-radius: 5px;
+    background-color: #34495e; /* Darker background for sections */
+    border-radius: 5px; /* Rounded corners */
 }
 
 section h2 {
-    color: #e74c3c;
-    text-align: center;
+    color: #e74c3c; /* Red color for section headings */
+    text-align: center; /* Center the text of the heading */
 }
 
 section p, section .tool-icons i {
-    color: #ecf0f1;
-    text-align: center;
+    color: #ecf0f1; /* Light text color for content */
+    text-align: center; /* Center the text of the content */
 }
 
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#contact input, #contact textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-#contact input:focus, #contact textarea:focus {
-    border-color: #e74c3c;
-}
-
-#skills {
-    padding: 20px 0;
-}
-
-.skill-item {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.progress-bar {
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    height: 20px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background-color: #3498db;
-    transition: width 1s ease-in-out;
+/* Divider bar */
+.divider {
+    width: 80%; /* Width of the divider */
+    height: 2px;
+    background-color: #e74c3c; /* Red color for the divider */
+    margin: 20px auto; /* Center the divider and add some margin for spacing */
 }
