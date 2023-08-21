@@ -38,7 +38,7 @@ h2 {
     margin: 40px auto;
 }
 
-.tool-icons, .certification-icons {
+.certification-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -49,5 +49,3 @@ h2 {
     font-size: 2em;
     color: #f39c12; /* Adjust the color to your preference */
 }
-
-/* ... (rest of the styles) ... */
