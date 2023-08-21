@@ -80,3 +80,30 @@ section p, section .tool-icons i {
 #contact input:focus, #contact textarea:focus {
     border-color: #e74c3c;
 }
+
+#skills {
+    padding: 20px 0;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 1s ease-in-out;
+}
