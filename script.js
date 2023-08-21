@@ -1,41 +1,105 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const experienceSection = document.getElementById("experience");
-
-    const experiences = [
-        {
-            jobTitle: "Front-end Developer",
-            company: "Company A",
-            year: "2019-2021",
-            description: "Developed responsive web applications using React and Vue."
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
         },
-        {
-            jobTitle: "Back-end Developer",
-            company: "Company B",
-            year: "2017-2019",
-            description: "Worked with Node.js and Express to build scalable APIs."
+        color: {
+            value: "#ffffff"
+        },
+        shape: {
+            type: "circle",
+            stroke: {
+                width: 0,
+                color: "#000000"
+            },
+            polygon: {
+                nb_sides: 5
+            },
+        },
+        opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false
+            }
+        },
+        size: {
+            value: 2,
+            random: true,
+            anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false
+            }
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+            }
         }
-    ];
-
-    experiences.forEach(exp => {
-        const expDiv = document.createElement("div");
-        expDiv.innerHTML = `
-            <h3>${exp.jobTitle} at ${exp.company}</h3>
-            <p>${exp.year}</p>
-            <p>${exp.description}</p>
-        `;
-        experienceSection.appendChild(expDiv);
-    });
-
-    // Visitor counter logic
-    const visitorCountElement = document.getElementById("visitorCount");
-    let visitorCount = localStorage.getItem("visitorCount") || 0;
-
-    // Increment the count
-    visitorCount++;
-
-    // Store the updated count back to localStorage
-    localStorage.setItem("visitorCount", visitorCount);
-
-    // Display the count
-    visitorCountElement.textContent = visitorCount;
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            },
+            onclick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+        },
+        modes: {
+            grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1
+                }
+            },
+            bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            },
+            remove: {
+                particles_nb: 2
+            }
+        }
+    },
+    retina_detect: true
 });

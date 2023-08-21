@@ -36,4 +36,52 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* ... (rest of the styles for skills, tools, contact, etc.) ... */
+/* Skills Section */
+.skill {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.progress-filled {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 1s ease-in-out;
+}
+
+/* Contact Me Section */
+#contact form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #2980b9;
+}
