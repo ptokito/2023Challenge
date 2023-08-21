@@ -1,63 +1,42 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2c3e50; /* Dark blue background */
-    color: #ecf0f1; /* Light text color */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(to right, #e74c3c, #9b59b6); /* Gradient from red to purple */
+    background: linear-gradient(to right, #e74c3c, #9b59b6);
     color: #ecf0f1;
     padding: 20px 0;
     text-align: center;
 }
 
 main {
-    background-color: #f4f4f4; /* Light gray background */
     padding: 20px;
     margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #34495e;
 }
 
 footer {
-    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
+    background: linear-gradient(to right, #3498db, #2ecc71);
     color: #ecf0f1;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-.tool-icons {
-    display: flex;
-    justify-content: space-around; /* Space out the icons */
-    flex-wrap: wrap; /* Allow icons to wrap to next line if needed */
-    padding: 20px 0; /* Add some vertical padding */
+.social-media a {
+    margin: 0 15px;
+    transition: transform 0.3s ease;
 }
 
-.tool-icons i {
-    margin: 10px 20px; /* Increase horizontal margin for more spacing */
-    font-size: 24px;
-    color: #16a085;
-    transition: color 0.3s;
-}
-
-.tool-icons i:hover {
-    color: #f39c12;
-}
-
-footer .social-media {
-    margin: 20px 0; /* Add some margin for spacing */
-}
-
-footer .social-media a {
-    margin: 0 15px; /* Increase spacing between icons */
+.social-media a:hover {
+    transform: scale(1.1);
 }
 
 h2 {
-    border-bottom: 2px solid #16a085; /* Greenish border for headings */
+    border-bottom: 2px solid #16a085;
     display: inline-block;
     padding-bottom: 5px;
     margin-top: 20px;
@@ -66,28 +45,83 @@ h2 {
 section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    align-items: center;
     padding: 20px;
     margin: 20px 0;
-    background-color: #34495e; /* Darker background for sections */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #34495e;
+    border-radius: 5px;
 }
 
 section h2 {
-    color: #e74c3c; /* Red color for section headings */
-    text-align: center; /* Center the text of the heading */
+    color: #e74c3c;
+    text-align: center;
 }
 
 section p, section .tool-icons i {
-    color: #ecf0f1; /* Light text color for content */
-    text-align: center; /* Center the text of the content */
+    color: #ecf0f1;
+    text-align: center;
 }
 
-/* Divider bar */
-.divider {
-    width: 80%; /* Width of the divider */
-    height: 2px;
-    background-color: #e74c3c; /* Red color for the divider */
-    margin: 20px auto; /* Center the divider and add some margin for spacing */
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #3498db;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    width: 45%;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 60%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 5%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline-content {
+        width: 90%;
+        left: 5%;
+    }
+
+    .timeline-item:before {
+        left: 10%;
+    }
+
+    .timeline-icon {
+        left: 10%;
+    }
 }
