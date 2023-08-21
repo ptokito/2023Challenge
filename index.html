@@ -6,56 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe - Senior DevOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div id="particles-js"></div> <!-- For the interactive background -->
+
     <header>
         <p>Senior DevOps Engineer</p>
     </header>
     <main>
-        <section id="about" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>Hello! I'm John, a dedicated Senior DevOps engineer with over 10 years of experience...</p>
-        </section>
-        <section id="experience" data-aos="fade-left">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon"></div>
-                    <div class="timeline-content">
-                        <h3>Lead DevOps Engineer at TechGiant Inc.</h3>
-                        <p>2021-Present</p>
-                        <p>Led a team of 5 engineers to streamline deployment processes...</p>
-                    </div>
+        <!-- ... (rest of the sections like About, Experience, etc.) ... -->
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <label>Docker</label>
+                <div class="progress">
+                    <div class="progress-filled" style="width: 90%;"></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon"></div>
-                    <div class="timeline-content">
-                        <h3>Senior DevOps Engineer at WebSolutions Co.</h3>
-                        <p>2017-2021</p>
-                        <p>Implemented CI/CD pipelines using Jenkins and AWS...</p>
-                    </div>
-                </div>
-                <!-- ... (add more timeline items as needed) ... -->
             </div>
+            <!-- ... Add more skills as needed ... -->
         </section>
-        <!-- ... (rest of the content) ... -->
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="YOUR_BACKEND_ENDPOINT" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <div class="social-media">
-            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p>Visitor Count: <span id="visitorCount">0</span></p>
+        <!-- ... (footer content) ... -->
     </footer>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!-- Include particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        AOS.init();
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
     </script>
-    <script src="script.js"></script>
 </body>
 
 </html>
